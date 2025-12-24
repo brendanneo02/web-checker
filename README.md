@@ -2,11 +2,11 @@ Welcome to my website checker.
 
 This is a simple Python Automation side project. It simply checks for website status whether they are UP or DOWN as well as logging responses time and record results.
 
-Some of its features are:
-HTTP status monitoring
-Response time management
-Logging to file
-Check interval (configurable)
+Some of its features are: \n
+HTTP status monitoring \n
+Response time management \n
+Logging to file \n
+Check interval (configurable) \n
 
 To setup:
 python3 -m venv venv
