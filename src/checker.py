@@ -36,7 +36,7 @@ def logResult(result: dict) -> None:
     statusText = "UP" if result["ok"] else "DOWN"
 
     line = (f"[{timestamp}] {statusText} | {result['url']} | "
-            f"code={result['statusCode']} | {result['elaspedTime']}ms"
+            f"code={result['statusCode']} | {result['Time']}ms"
     )
 
     if result["error"]:
@@ -45,7 +45,7 @@ def logResult(result: dict) -> None:
     print(line)
     logFile.open("a", encoding="utf-8").write(line + "\n")
 
-def run(urls: list[str], intervalSeconds: int = 60) -> None:
+def run(urls: list[str], intervalSeconds = 60):
     while True:
         for url in urls:
             result = checkUrl(url)
@@ -60,4 +60,4 @@ if __name__ == "__main__":
         "https://www.x.com",
     ]
 
-    run(URLS, intervalSeconds=60)
+    run(URLS, intervalSeconds = 60)
